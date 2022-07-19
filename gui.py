@@ -4,6 +4,7 @@ import threading
 import time
 import random
 from tkinter.messagebox import *
+import pyperclip
 
 
 
@@ -35,6 +36,7 @@ class myTk(tk.Tk):
         self.l2=random.randint(10001,19999)
         t1=threading.Thread(target=self.RunButton)
         t2=threading.Thread(target=showinfo,args=("提示","Frp已启动\n链接：{0}:{1}".format("play.tdrgame.top",self.l2)))
+        pyperclip.copy("{0}:{1}".format("play.tdrgame.top",self.l2))
         t1.start()
         t2.start()
         time.sleep(1)
