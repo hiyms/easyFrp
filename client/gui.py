@@ -29,7 +29,7 @@ class myTk(tk.Tk):
         time.sleep(1)
         l1=self.entry1.get()
         # l2=self.entry2.get()
-        myfrp.RunFrp(l1,self.l2,frp.ConnectionProtocol.TCP)
+        myfrp.RunFrp(l1, self.l2, frp.ConnectionProtocol.TCP)
         # threading.Thread(target=myfrp.RunFrp,args=(l1,l2,frp.ConnectionProtocol.TCP))
 
     def easyRun(self):
